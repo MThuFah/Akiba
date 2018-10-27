@@ -33,6 +33,7 @@ public class Login extends AppCompatActivity {
     Button btnRegister;
 
     //contoh dari ilham
+    //ini yang pull ke dua
     SessionManager session;
 
     Context mContext;
