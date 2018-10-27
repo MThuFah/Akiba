@@ -32,6 +32,7 @@ public class Login extends AppCompatActivity {
     ProgressDialog Proses;
     Button btnRegister;
 
+    //contoh dari ilham
     SessionManager session;
 
     Context mContext;
