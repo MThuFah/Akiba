@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailAdmin">
+
+    <GridLayout
+        android:id="@+id/gl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"
+        android:layout_below="@+id/img_lembaga">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:text="Faisal Akib"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="20dp"
+                    android:fontFamily="serif"/>
+
+                <TextView
+                    android:id="@+id/tv_lembaga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/tv_nama"
+                    android:text="(Wahdah Islamiah)"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp"
+                    android:textStyle="italic"
+                    android:fontFamily="serif"/>
+
+                <TextView
+                    android:id="@+id/tv_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/tv_lembaga"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_person_pin_circle_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:singleLine="true"
+                    android:text="BTN Graha Kalogowa Block D4 nomor 9"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/tv_alamat"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_email_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="email@gmail.com"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_call_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:text="082987847223"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp"/>
+
+                <ImageView
+                    android:id="@+id/btn_kluar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_lock_open_black_24dp"
+                    android:padding="5dp"
+                    android:background="@drawable/bg_btn"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </GridLayout>
+
+    <ImageView
+        android:id="@+id/img_lembaga"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:background="@drawable/bg_logo"
+        android:elevation="4dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gl"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Daftar Kajian"
+                    android:textSize="16dp"
+                    android:textColor="@color/black_primaryText"
+                    android:fontFamily="serif"/>
+
+            </LinearLayout>
+
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/sr_kajian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbarMain"
+                android:layout_gravity="center">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_kajian"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?actionBarSize"
+                    android:scrollbars="vertical" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_tambahKajian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorAccent"
+                android:src="@drawable/ic_add_black_24dp" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

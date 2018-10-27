@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TambahKajian">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aplikasi Kajian Islami"
+                android:textSize="18dp"
+                android:textColor="@color/white_primaryText"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="serif"
+                        android:gravity="center"
+                        android:text="Tambah Kajian"
+                        android:textColor="@color/black_primaryText"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Penyelenggara"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_penyelenggara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan nama penyelenggara"
+                    android:textColor="@color/black_secondaryText"
+                    android:editable="false"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Judul Kajian"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_judul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Judul Kajian"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Tema Kajian"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_tema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tema Kajian"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Pemateri"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_pemateri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pemateri Kajian"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Kategori"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/sp_kategori"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/kategoriKajian"
+                    android:padding="8dp"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Peserta Kajian"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/sp_peserta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/peserta"
+                    android:padding="8dp"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Tempat Kajian"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_tempat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tempat Kajian"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Alamat"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Alamat"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Website Streaming"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rd_iya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Ada"
+                        android:textColor="@color/black_secondaryText"
+                        android:textSize="14dp" />
+
+                    <RadioButton
+                        android:id="@+id/rd_tidak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toRightOf="@+id/rd_iya"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Tidak Ada"
+                        android:textColor="@color/black_secondaryText"
+                        android:textSize="14dp" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/et_streaming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rd_iya"
+                    android:hint="Alamat Website Lengkap"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Catatan"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/et_catatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_streaming"
+                    android:hint="Opsional"
+                    android:textColor="@color/black_secondaryText"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_lokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi Kajian"
+                        android:textColor="@color/black_primaryText"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ceklis"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_check_circle_black_24dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/et_tanggal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Pilih Tanggal"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/et_reminder"/>
+
+
+                <TextView
+                    android:id="@+id/et_waktu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Pilih Waktu"
+                    android:textColor="@color/black_primaryText"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_tambahKajian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_btn"
+            android:textSize="16dp"
+            android:text="Tambah Kajian"
+            android:textColor="@color/white_primaryText"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</ScrollView>

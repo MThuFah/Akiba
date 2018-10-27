@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Aplikasi Kajian Islami"
+                android:textSize="18dp"
+                android:textColor="@color/white_primaryText"/>
+
+            <ImageView
+                android:id="@+id/profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_account_circle_black_24dp"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sr_kajian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarMain"
+        android:layout_gravity="center">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_kajian"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize"
+            android:scrollbars="vertical" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_tambahKajian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/ic_add_black_24dp" />
+
+</RelativeLayout>

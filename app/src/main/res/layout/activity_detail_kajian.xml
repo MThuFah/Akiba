@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailKajian">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Kajian"
+                android:textSize="18dp"
+                android:textColor="@color/white_primaryText"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/posterDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/gambar"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#82000000"></View>
+
+            <TextView
+                android:id="@+id/tv_detailJudul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Judul Kajian"
+                android:textAlignment="center"
+                android:textColor="@color/white_primaryText"
+                android:textStyle="bold|italic"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/tv_detailPemateri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_detailJudul"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Ust. ......................."
+                android:textAlignment="center"
+                android:textColor="@color/white_primaryText"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <ImageView
+                    android:id="@+id/btn_notif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_alarm_add_black_24dp"
+                    android:background="@drawable/bg_btn"
+                    android:padding="8dp"/>
+
+                <TextView
+                    android:id="@+id/pelaksana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_person_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Pelaksana : "
+                    android:textColor="@color/black_secondaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_pelaksanaDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_toRightOf="@+id/pelaksana"
+                    android:gravity="center"
+                    android:text="Ismail"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pelaksana"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_forum_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Tema : "
+                    android:textColor="@color/black_secondaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailTema"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/pelaksana"
+                    android:layout_toRightOf="@+id/tema"
+                    android:gravity="center"
+                    android:text="Muamalah"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailTanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_detailTema"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Sen 10 Mar 2018"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailWaktu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_detailTema"
+                    android:layout_toRightOf="@+id/tv_detailTanggal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="10:00 WITA"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailPeserta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_detailTanggal"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_people_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Khusus Ikhwan"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailTempat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detailPeserta"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_pin_drop_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Masjid Nurul Yasin"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_detailAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detailTempat"
+                    android:layout_marginLeft="29dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Masjid Nurul Yaasin"
+                    android:textColor="@color/black_secondaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_streaming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_detailAlamat"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_videocam_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Video Streaming"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_primaryText"/>
+
+                <TextView
+                    android:id="@+id/catatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_error_outline_black_24dp"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:layout_below="@id/tv_streaming"
+                    android:text="Catatan : "
+                    android:textStyle="italic"
+                    android:textColor="#006400"/>
+
+                <TextView
+                    android:id="@+id/tv_catatan"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="24dp"
+                    android:layout_toRightOf="@+id/catatan"
+                    android:layout_below="@id/tv_streaming"
+                    android:gravity="center"
+                    android:text="Baju Putih"
+                    android:textStyle="italic"
+                    android:textColor="#006400"/>
+
+                <View
+                    android:id="@+id/garis"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@id/tv_catatan"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/black_disableText"></View>
+
+                <View
+                    android:id="@+id/garis1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/garis"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black_disableText"></View>
+
+                <TextView
+                    android:id="@+id/petaLokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/garis1"
+                    android:layout_marginTop="20dp"
+                    android:text="Peta Lokasi"
+                    android:textColor="@color/black_secondaryText"/>
+
+                <TextView
+                    android:id="@+id/tv_petaLokasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/petaLokasi"
+                    android:text="Masjid Nurul Yaasin"
+                    android:textColor="@color/black_primaryText"/>
+
+                <fragment
+                    android:id="@+id/mapsDetail"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_below="@+id/tv_petaLokasi"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

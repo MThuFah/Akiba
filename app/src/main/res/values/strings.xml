@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Akibav2</string>
+    <string name="title_activity_pilih_lokasi">Map</string>
+    <string name="title_activity_lihat_lokasi">Map</string>
+
+    <string-array name="kategoriKajian">
+        <item>Aqidah</item>
+        <item>Akhlak</item>
+        <item>Ibadah</item>
+        <item>Muamalah</item>
+        <item>Thaharah</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="peserta">
+        <item>Umum</item>
+        <item>Khusus Ikhwan</item>
+        <item>Khusus Akhwat</item>
+    </string-array>
+
+</resources>
