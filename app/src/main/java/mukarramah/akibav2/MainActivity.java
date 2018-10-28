@@ -52,9 +52,6 @@ public class MainActivity extends AppCompatActivity {
                 .unsubscribeWhenNotificationsAreDisabled(true)
                 .init();
 
-        Log.e("notif","turn off");
-        OneSignal.sendTag("reminder", "off");
-
         swipeRefreshKajian      = (SwipeRefreshLayout) findViewById(R.id.sr_kajian);
         recyclerViewKajian      = findViewById(R.id.rv_kajian);
         layoutManager           = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);

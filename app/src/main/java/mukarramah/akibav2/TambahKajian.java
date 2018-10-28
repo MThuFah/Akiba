@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -18,6 +19,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import com.onesignal.OneSignal;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -147,6 +150,8 @@ public class TambahKajian extends AppCompatActivity implements RadioGroup.OnChec
             }
         });
 
+
+
         tambah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -188,6 +193,10 @@ public class TambahKajian extends AppCompatActivity implements RadioGroup.OnChec
                 });
             }
         });
+
+        Log.e("notif","turn off");
+        OneSignal.sendTag("reminder", "off");
+
     }
 
     @Override
