@@ -50,6 +50,12 @@ public class DetailKajian extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_kajian);
 
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
+
         judul           = findViewById(R.id.tv_detailJudul);
         penyelenggara   = findViewById(R.id.tv_pelaksanaDetail);
         tema            = findViewById(R.id.tv_detailTema);
@@ -151,6 +157,8 @@ public class DetailKajian extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View view) {
 
                 Toast.makeText(DetailKajian.this, "Reminder di aktifkan", Toast.LENGTH_SHORT).show();
+
+
                 Log.e("notif","turn On");
                 OneSignal.sendTag("reminder", "on");
             }

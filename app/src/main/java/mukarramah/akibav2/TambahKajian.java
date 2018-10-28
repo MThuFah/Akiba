@@ -58,6 +58,12 @@ public class TambahKajian extends AppCompatActivity implements RadioGroup.OnChec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tambah_kajian);
 
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
+
         judul           = findViewById(R.id.et_judul);
         penyelenggara   = findViewById(R.id.et_penyelenggara);
         tema            = findViewById(R.id.et_tema);
